@@ -9,7 +9,6 @@ library (tidyverse)
 bmyco_ratio<-1.025
 myco_mtbc_ratio<-15
 
-
 dir.create("./output/temp")
 
 make_kraken <- function(files) {
@@ -50,9 +49,7 @@ make_kraken <- function(files) {
 res <- sapply(files, make_kraken)
 
 
-
-
-# Get a List of all files in directory named with a key word, say all `.csv` files
+# Get a List of all`.csv` files in the temp directory
 filenames <- list.files("./output/temp", pattern="*.csv", full.names=TRUE)
 
 # read and row bind all data sets
