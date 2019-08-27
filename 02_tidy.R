@@ -5,10 +5,10 @@
 
 # Use this file for tidying data and preparing it for further analysis
 library(tidyverse)
-#library(dplyr)
 
 
 my_data <- as_tibble(data)
+
 
 # Galaxy workflow filters c5==0 or c5==2 or c5==1763 or c5==77643 or c5==1773 or c5==9606
 
@@ -39,7 +39,29 @@ human<- my_data %>% filter(V5 == 9606)
 human<- human[,c("V1")]
 
 
-# join the dataframes together
-df <- data.frame(unclassified,bacteria,mycobacterium,mtbc,mtb,human)
-colnames(df) <- c("unclassified","bacteria","mycobacterium","mtbc","mtb","human")
 
+# join the dataframes together
+kraken_linelist <- data.frame(name,unclassified,bacteria,mycobacterium,mtbc,mtb,human)
+colnames(kraken_linelist) <- c("sample","Kracken_Unclassified","Kracken_Bacteria","Kracken_Mycobacterium","Kracken_MTBC","Kracken_M.tuberculosis","Kraken_human")
+
+
+# divide bacteria by mycobacteria
+kraken_linelist$Kracken_Bacteria_Myco <- (kraken_linelist$Kracken_Bacteria / kraken_linelist$Kracken_Mycobacterium)
+
+# divide mycobacteria by mtbc
+kraken_linelist$Kracken_Myco_MTBC <- (kraken_linelist$Kracken_Mycobacterium / kraken_linelist$Kracken_MTBC)
+
+# add these columns
+Bacterial_Contamination <- ""
+Mycobacterial_Contamination <- ""
+
+kraken_linelist$Bacterial_Contamination <- Bacterial_Contamination
+
+#calculate contamination
+kraken_linelist$Bacterial_Contamination<- ifelse(kraken_linelist$Kracken_Bacteria_Myco >=1.025, "Possible contamination", "no")
+
+
+kraken_linelist$Mycobacterial_Contamination <- Mycobacterial_Contamination
+
+#calculate contamination
+kraken_linelist$Mycobacterial_Contamination <- ifelse(kraken_linelist$Kracken_Myco_MTBC >=15, "Possible contamination", "no")
