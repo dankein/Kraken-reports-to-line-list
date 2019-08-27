@@ -36,6 +36,9 @@ Data is in the /Output folder under kraken_linelist.csv
 
 ## Interpret the data
 
+**Refer to the Kraken Manual**
+https://ccb.jhu.edu/software/kraken2/index.shtml?t=manual
+
 Each column contains the percentage of reads covered by the clade rooted at that taxon. For example the "unclassified" column contains the percentage of reads that Kraken couldn't classify, and the "bacteria" column contains the percentage of reads classified as bacteria. 
 
  
