@@ -1,9 +1,6 @@
-# R Project Analysis Template
-_Replace this with your actual README file_
+# *Mycobacterium tuberculosis* Kraken Reports to Line List
 
-This template is meant to guide and structure your analysis projects in R whether or not you use version control (github/gitlab). Feel free to delete the contents of this readme and fill it out again with [markdown formatted text](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
-
-The folder structure helps to organize data and scripts according to their purpose and facilitate easy reuse of project workflows on new datasets. Feel free to delete every portion that doesn't fit your needs.
+Convert
 
 ## Project Setup with this Template and RStudio
 
