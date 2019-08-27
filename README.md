@@ -1,6 +1,8 @@
-# *Mycobacterium tuberculosis* Kraken Reports to Line List
+# Kraken Reports on *Mycobacterium tuberculosis* samples to a Line List
 
-Convert Kraken2 reports generated in Galaxy to a database friendly .csv line list containing one sample per line. 
+Convert Kraken2 reports on *Mycobacterium tuberculosis* sequences generated in Galaxy to a database friendly .csv line list containing one sample per line. 
+
+This line list detects Bacterial, Mycobacterial and human contamination.
 
 ## Installation
 
@@ -10,3 +12,24 @@ Convert Kraken2 reports generated in Galaxy to a database friendly .csv line lis
 4. From the File menu select 'open project' and open 'Kraken-reports-to-line-list.Rproj'
 
 ## Generate Data
+
+Generate Kraken2 Reports in Galaxy using the following settings:  
+
+*Print scientific names instead of just taxids*  No  
+*Confidence* 0  
+*Minimum Base Quality* 0  
+*Enable quick operation* No  
+*Split classified and unclassified outputs?* No  
+**Create Report**  
+*Print a report with aggregrate counts/clade to file* Yes  
+*Format report output like Kraken 1's kraken-mpa-report* No  
+*Report counts for ALL taxa, even if counts are zero* No  
+*Select a Kraken2 database* [Use a comprehensive database]
+
+## Run the Scripts
+1. Run 01_read_data.R  
+2. Run 02_generate_linelist.R
+
+## Open the Data
+
+Data is in the /Output folder under kraken_linelist.csv
