@@ -2,7 +2,7 @@
 # from 01_read.R (files <- list.files(path="./data", pattern="*.tabular", full.names=TRUE, recursive=FALSE))
 
 # Load library
-library(data.table)
+
 library (tidyverse)
 
 # Set the Ratios

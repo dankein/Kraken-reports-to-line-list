@@ -33,3 +33,9 @@ Generate Kraken2 Reports in Galaxy using the following settings:
 ## Open the Data
 
 Data is in the /Output folder under kraken_linelist.csv
+
+## Interpret the data
+
+Each column contains the percentage of reads covered by the clade rooted at that taxon. For example the "unclassified" column contains the percentage of reads that Kraken couldn't classify, and the "bacteria" column contains the percentage of reads classified as bacteria. 
+
+ 
