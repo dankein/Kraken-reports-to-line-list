@@ -1,5 +1,5 @@
 
-files <- list.files(path="./data", pattern="*.tabular", full.names=TRUE, recursive=FALSE)
+# from 01_read.R (files <- list.files(path="./data", pattern="*.tabular", full.names=TRUE, recursive=FALSE))
 
 dir.create("./output/temp")
 
@@ -51,4 +51,4 @@ filenames <- list.files("./output/temp", pattern="*.csv", full.names=TRUE)
 data <- rbindlist(lapply(filenames,fread))
 write.csv(data, file="./output/kraken_linelist.csv", row.names=FALSE)
 
-unlink("./output/temp")
+unlink("./output/temp", recursive = TRUE)
