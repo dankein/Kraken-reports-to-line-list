@@ -1,13 +1,13 @@
 # *Mycobacterium tuberculosis* Kraken Reports to Line List
 
-Convert
+Convert Kraken2 reports generated in Galaxy to a database friendly .csv line list containing one sample per line. 
 
-## Project Setup with this Template and RStudio
+## Installation
 
 1. Download a zip file of the template by clicking ![](https://raw.githubusercontent.com/TheZetner/picturehosting/master/clone-or-download.png)  
 2. Unzip where you want the project to live on your computer (eg. Documents/R_projects/) and rename the folder  
-3. Load [RStudio](https://www.rstudio.com/) (are you not using RStudio? You really should be)  
-4. Click _File>New Project...>Existing Directory_  
+3. Load [RStudio](https://www.rstudio.com/)   
+4. Open Kraken in R.Rproj  
 5. Select the unzipped template folder then _Create Project_  
 
 Start working!
