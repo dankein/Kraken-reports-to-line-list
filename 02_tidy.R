@@ -21,3 +21,13 @@ bacteria<- my_data %>% filter(V5 == 2)
 
 #filter Mycobacterium
 mycobacterium<- my_data %>% filter(V5 == 1763)
+
+#filter Mycobacterium tuberculosis complex
+mtbc<- my_data %>% filter(V5 == 77643)
+
+#filter Mycobacterium tuberculosis 
+mtbc<- my_data %>% filter(V5 == 1773)
+
+#filter human 
+human<- my_data %>% filter(V5 == 9606)
+
