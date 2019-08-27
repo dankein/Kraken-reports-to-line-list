@@ -1,6 +1,11 @@
 
 # from 01_read.R (files <- list.files(path="./data", pattern="*.tabular", full.names=TRUE, recursive=FALSE))
 
+# Load library
+library(data.table)
+library (tidyverse)
+
+
 dir.create("./output/temp")
 
 make_kraken <- function(files) {
@@ -27,8 +32,8 @@ make_kraken <- function(files) {
   human<- human[,c("V1")]
   kraken_linelist <- data.frame(name,unclassified,bacteria,mycobacterium,mtbc,mtb,human)
   colnames(kraken_linelist) <- c("sample","Kracken_Unclassified","Kracken_Bacteria","Kracken_Mycobacterium","Kracken_MTBC","Kracken_M.tuberculosis","Kraken_human")
-  kraken_linelist$Kracken_Bacteria_Myco_Ratio <- (kraken_linelist$Kracken_Bacteria / kraken_linelist$Kracken_Mycobacterium)
-  kraken_linelist$Kracken_Myco_MTBC_Ratio <- (kraken_linelist$Kracken_Mycobacterium / kraken_linelist$Kracken_MTBC)
+  kraken_linelist$Kracken_Bacteria_Myco_Ratio <- ((kraken_linelist$Kracken_Bacteria +0.000001) / (kraken_linelist$Kracken_Mycobacterium + 0.000001))
+  kraken_linelist$Kracken_Myco_MTBC_Ratio <- ((kraken_linelist$Kracken_Mycobacterium +0.000001) / (kraken_linelist$Kracken_MTBC +0.000001))
   Bacterial_Contamination <- ""
   Mycobacterial_Contamination <- ""
   kraken_linelist$Bacterial_Contamination <- Bacterial_Contamination
@@ -41,8 +46,7 @@ make_kraken <- function(files) {
 res <- sapply(files, make_kraken)
 
 
-# Load library
-library(data.table)
+
 
 # Get a List of all files in directory named with a key word, say all `.csv` files
 filenames <- list.files("./output/temp", pattern="*.csv", full.names=TRUE)
