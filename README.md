@@ -26,7 +26,7 @@ Generate Kraken2 Reports in Galaxy using the following settings:
 *Report counts for ALL taxa, even if counts are zero* No  
 *Select a Kraken2 database* [Use a comprehensive database]
 
-## Run the Scripts
+## Run the Scripts located in the R Folder
 1. Run 01_read_data.R  
 2. Run 02_generate_linelist.R
 
