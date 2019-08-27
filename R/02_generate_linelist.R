@@ -1,16 +1,21 @@
+# Load data using 01_read.R or add this line (files <- list.files(path="./data", pattern="*.tabular", full.names=TRUE, recursive=FALSE))
 
-# from 01_read.R (files <- list.files(path="./data", pattern="*.tabular", full.names=TRUE, recursive=FALSE))
-
-# Load library
+# Daniel Kein
+# August 2019
 
 library (tidyverse)
 
-# Set the Ratios
+# Set the Contamination Ratios
+
+#Set the Bacteria to Mycobacteria Ratio (1.025 suggested)
 bmyco_ratio<-1.025
+#Set the Mycobacteria to MTBC Ratio (15 suggested)
 myco_mtbc_ratio<-15
 
+# Create a temp directory
 dir.create("./output/temp")
 
+# Definte the make kraken line list function
 make_kraken <- function(files) {
 
   for(i in 1:length(files)){
@@ -46,14 +51,18 @@ make_kraken <- function(files) {
   write.csv(kraken_linelist, file=paste("./output/temp/",name,".csv", sep=""), row.names=FALSE)
 }
 
+# Apply the make_kraken function to all the files in the data directory
 res <- sapply(files, make_kraken)
 
 
 # Get a List of all`.csv` files in the temp directory
 filenames <- list.files("./output/temp", pattern="*.csv", full.names=TRUE)
 
-# read and row bind all data sets
-data <- rbindlist(lapply(filenames,fread))
-write.csv(data, file="./output/kraken_linelist.csv", row.names=FALSE)
+# read and row bind all the .csv files together
+csv_data <- rbindlist(lapply(filenames,fread))
 
+# write the final output to .csv
+write.csv(csv_data, file="./output/kraken_linelist.csv", row.names=FALSE)
+
+#Delete the temp directory
 unlink("./output/temp", recursive = TRUE)
