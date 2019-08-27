@@ -5,6 +5,10 @@
 library(data.table)
 library (tidyverse)
 
+# Set the Ratios
+bmyco_ratio<-1.025
+myco_mtbc_ratio<-15
+
 
 dir.create("./output/temp")
 
@@ -37,9 +41,9 @@ make_kraken <- function(files) {
   Bacterial_Contamination <- ""
   Mycobacterial_Contamination <- ""
   kraken_linelist$Bacterial_Contamination <- Bacterial_Contamination
-  kraken_linelist$Bacterial_Contamination<- ifelse(kraken_linelist$Kracken_Bacteria_Myco >=1.025, "Possible contamination", "no")
+  kraken_linelist$Bacterial_Contamination<- ifelse(kraken_linelist$Kracken_Bacteria_Myco >=bmyco_ratio, "Possible contamination", "no")
   kraken_linelist$Mycobacterial_Contamination <- Mycobacterial_Contamination
-  kraken_linelist$Mycobacterial_Contamination <- ifelse(kraken_linelist$Kracken_Myco_MTBC >=15, "Possible contamination", "no")
+  kraken_linelist$Mycobacterial_Contamination <- ifelse(kraken_linelist$Kracken_Myco_MTBC >=myco_mtbc_ratio, "Possible contamination", "no")
   write.csv(kraken_linelist, file=paste("./output/temp/",name,".csv", sep=""), row.names=FALSE)
 }
 
