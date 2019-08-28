@@ -37,9 +37,17 @@ make_kraken <- function(files) {
   mtbc<- mtbc[,c("V1")]
   mtb<- my_data %>% filter(V5 == 1773)
   mtb<- mtb[,c("V1")]
-  # this sets a default value
+  # This slows things down, but not all samples have Mtb in them and the script breaks, this sets a default value for mtb if not present
+  if(nrow(mtb) == 0){
+    V1<-c("not detected")
+    mtb<-data.frame(V1)
+  }else{
+    mtb<- my_data %>% filter(V5 == 1773)
+    mtb<- mtb[,c("V1")]}
+    
   human<- my_data %>% filter(V5 == 9606) 
   human<- human[,c("V1")]
+  # This slows things down, but not all samples have human DNA in them and the script breaks, this sets a default value for human if not present
   if(nrow(human) == 0){
     V1<-c("not detected")
     human<-data.frame(V1)
