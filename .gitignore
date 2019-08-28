@@ -39,8 +39,8 @@ rsconnect/
 .DS_Store
 .Rproj.user
 
-# Data directory
-/data
+# Data in data directory
+*.tabular
 
-# Output directory
-/output
+# Outputs
+*.csv
