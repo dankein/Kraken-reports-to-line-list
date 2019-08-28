@@ -4,6 +4,7 @@
 # August 2019
 
 library (tidyverse)
+library (data.table)
 
 # Set the Contamination Ratios
 
@@ -36,10 +37,17 @@ make_kraken <- function(files) {
   mtbc<- mtbc[,c("V1")]
   mtb<- my_data %>% filter(V5 == 1773)
   mtb<- mtb[,c("V1")]
-  human<- my_data %>% filter(V5 == 9606)
+  # this sets a default value
+  human<- my_data %>% filter(V5 == 9606) 
   human<- human[,c("V1")]
+  if(nrow(human) == 0){
+    V1<-c("not detected")
+    human<-data.frame(V1)
+  }else{
+    human<- my_data %>% filter(V5 == 9606) 
+    human<- human[,c("V1")]}
   kraken_linelist <- data.frame(name,unclassified,bacteria,mycobacterium,mtbc,mtb,human)
-  colnames(kraken_linelist) <- c("sample","Kracken_Unclassified","Kracken_Bacteria","Kracken_Mycobacterium","Kracken_MTBC","Kracken_M.tuberculosis","Kraken_human")
+  colnames(kraken_linelist) <- c("sample","Kracken_Unclassified","Kracken_Bacteria","Kracken_Mycobacterium","Kracken_MTBC","Kracken_M.tuberculosis","human")
   kraken_linelist$Kracken_Bacteria_Myco_Ratio <- ((kraken_linelist$Kracken_Bacteria +0.000001) / (kraken_linelist$Kracken_Mycobacterium + 0.000001))
   kraken_linelist$Kracken_Myco_MTBC_Ratio <- ((kraken_linelist$Kracken_Mycobacterium +0.000001) / (kraken_linelist$Kracken_MTBC +0.000001))
   Bacterial_Contamination <- ""

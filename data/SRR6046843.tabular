@@ -1,0 +1,147 @@
+  1.42	142	142	U	0	unclassified
+ 98.58	9835	0	R	1	root
+ 98.58	9835	0	R1	131567	  cellular organisms
+ 98.56	9833	3	D	2	    Bacteria
+ 98.42	9819	0	D1	1783272	      Terrabacteria group
+ 98.41	9818	0	P	201174	        Actinobacteria
+ 98.41	9818	3	C	1760	          Actinobacteria
+ 98.31	9808	2	O	85007	            Corynebacteriales
+ 98.26	9803	5	F	1762	              Mycobacteriaceae
+ 98.06	9783	1722	G	1763	                Mycobacterium
+ 79.88	7970	2516	G1	120793	                  Mycobacterium avium complex (MAC)
+ 49.24	4913	4913	S	222805	                    Mycobacterium chimaera
+  2.97	296	250	S	1767	                    Mycobacterium intracellulare
+  0.30	30	13	S1	1203599	                      Mycobacterium intracellulare subsp. yongonense
+  0.17	17	17	S2	1138871	                        Mycobacterium intracellulare subsp. yongonense 05-1390
+  0.08	8	0	S1	35617	                      Mycobacterium intracellulare subsp. intracellulare
+  0.08	8	8	S2	1232724	                        Mycobacterium intracellulare subsp. intracellulare MTCC 9506
+  0.06	6	6	S1	487521	                      Mycobacterium intracellulare ATCC 13950
+  0.02	2	2	S1	1138382	                      Mycobacterium intracellulare MOTT-02
+  1.29	129	19	S	1764	                    Mycobacterium avium
+  0.81	81	81	S1	243243	                      Mycobacterium avium 104
+  0.27	27	23	S1	439334	                      Mycobacterium avium subsp. hominissuis
+  0.04	4	4	S2	1229671	                        Mycobacterium avium subsp. hominissuis TH135
+  0.02	2	2	S1	1770	                      Mycobacterium avium subsp. paratuberculosis
+  0.73	73	73	S	701042	                    Mycobacterium marseillense
+  0.20	20	0	S	339268	                    Mycobacterium colombiense
+  0.20	20	20	S1	1041522	                      Mycobacterium colombiense CECT 3035
+  0.19	19	19	S	1138383	                    Mycobacterium paraintracellulare
+  0.04	4	4	S	64667	                    Mycobacterium lepraemurium
+  0.41	41	41	S	1168287	                  Mycobacterium sp. MOTT36Y
+  0.19	19	19	S	1768	                  Mycobacterium kansasii
+  0.07	7	7	S	212767	                  Mycobacterium sp. JS623
+  0.05	5	0	G1	77643	                  Mycobacterium tuberculosis complex
+  0.03	3	3	S	1773	                    Mycobacterium tuberculosis
+  0.02	2	0	S	78331	                    Mycobacterium canettii
+  0.02	2	2	S1	1205674	                      Mycobacterium canettii CIPT 140070010
+  0.04	4	4	S	1389713	                  Mycobacterium paragordonae
+  0.04	4	4	S	164757	                  Mycobacterium sp. JLS
+  0.03	3	3	S	2487344	                  Mycobacterium sp. DL90
+  0.03	3	3	S	1936029	                  Mycobacterium sp. MS1601
+  0.02	2	0	G1	2249310	                  Mycobacterium simiae complex
+  0.02	2	2	S	722731	                    Mycobacterium shigaense
+  0.01	1	0	S	29311	                  Mycobacterium haemophilum
+  0.01	1	1	S1	1202450	                    Mycobacterium haemophilum DSM 44634
+  0.01	1	1	S	1273687	                  Mycobacterium sp. VKM Ac-1817D
+  0.01	1	1	S	1545728	                  Mycobacterium sp. EPa45
+  0.12	12	1	G	1866885	                Mycolicibacterium
+  0.05	5	0	S	1772	                  Mycolicibacterium smegmatis
+  0.05	5	5	S1	1214915	                    Mycolicibacterium smegmatis MKD8
+  0.02	2	0	S	1800	                  Mycolicibacterium chubuense
+  0.02	2	2	S1	710421	                    Mycolicibacterium chubuense NBB4
+  0.01	1	1	S	1797	                  Mycolicibacterium thermoresistibile
+  0.01	1	0	S	1804	                  Mycolicibacterium gilvum
+  0.01	1	1	S1	278137	                    Mycolicibacterium gilvum Spyr1
+  0.01	1	1	S	134601	                  Mycolicibacterium goodii
+  0.01	1	1	S	370526	                  Mycolicibacterium rutilum
+  0.03	3	2	G	670516	                Mycobacteroides
+  0.01	1	1	S	36809	                  Mycobacteroides abscessus
+  0.02	2	0	F	85025	              Nocardiaceae
+  0.01	1	0	G	1817	                Nocardia
+  0.01	1	1	S	2382165	                  Nocardia sp. CFHS0054
+  0.01	1	1	G	1827	                Rhodococcus
+  0.01	1	0	F	85026	              Gordoniaceae
+  0.01	1	0	G	2053	                Gordonia
+  0.01	1	0	S	2054	                  Gordonia bronchialis
+  0.01	1	1	S1	526226	                    Gordonia bronchialis DSM 43247
+  0.03	3	0	O	85006	            Micrococcales
+  0.03	3	3	F	1268	              Micrococcaceae
+  0.01	1	0	O	85009	            Propionibacteriales
+  0.01	1	0	F	31957	              Propionibacteriaceae
+  0.01	1	0	G	29404	                Microlunatus
+  0.01	1	0	S	29405	                  Microlunatus phosphovorus
+  0.01	1	1	S1	1032480	                    Microlunatus phosphovorus NM-1
+  0.01	1	0	O	85011	            Streptomycetales
+  0.01	1	0	F	2062	              Streptomycetaceae
+  0.01	1	1	G	1883	                Streptomyces
+  0.01	1	0	O	85012	            Streptosporangiales
+  0.01	1	0	F	2012	              Thermomonosporaceae
+  0.01	1	0	G	1988	                Actinomadura
+  0.01	1	1	S	1411117	                  Actinomadura amylolytica
+  0.01	1	0	O	2037	            Actinomycetales
+  0.01	1	0	F	2049	              Actinomycetaceae
+  0.01	1	0	G	1654	                Actinomyces
+  0.01	1	1	S	52774	                  Actinomyces slackii
+  0.01	1	0	P	1239	        Firmicutes
+  0.01	1	0	C	91061	          Bacilli
+  0.01	1	0	O	186826	            Lactobacillales
+  0.01	1	0	F	33958	              Lactobacillaceae
+  0.01	1	0	G	1578	                Lactobacillus
+  0.01	1	1	S	47770	                  Lactobacillus crispatus
+  0.10	10	0	P	1224	      Proteobacteria
+  0.05	5	0	C	28216	        Betaproteobacteria
+  0.05	5	0	O	80840	          Burkholderiales
+  0.03	3	0	F	119060	            Burkholderiaceae
+  0.03	3	0	G	1822464	              Paraburkholderia
+  0.03	3	0	S	261302	                Paraburkholderia phytofirmans
+  0.03	3	3	S1	398527	                  Paraburkholderia phytofirmans PsJN
+  0.01	1	0	F	75682	            Oxalobacteraceae
+  0.01	1	0	G	149698	              Massilia
+  0.01	1	1	S	945844	                Massilia oculi
+  0.01	1	0	F	80864	            Comamonadaceae
+  0.01	1	1	G	80865	              Delftia
+  0.03	3	0	C	28211	        Alphaproteobacteria
+  0.02	2	0	O	204441	          Rhodospirillales
+  0.02	2	0	F	433	            Acetobacteraceae
+  0.02	2	0	G	50714	              Acidisphaera
+  0.02	2	2	S	1969806	                Acidisphaera sp. G45-3
+  0.01	1	0	O	356	          Rhizobiales
+  0.01	1	0	F	82115	            Rhizobiaceae
+  0.01	1	0	F1	227290	              Rhizobium/Agrobacterium group
+  0.01	1	0	G	357	                Agrobacterium
+  0.01	1	0	G1	1183400	                  Agrobacterium tumefaciens complex
+  0.01	1	1	S	1176649	                    Agrobacterium fabrum
+  0.02	2	0	C	1236	        Gammaproteobacteria
+  0.01	1	0	O	91347	          Enterobacterales
+  0.01	1	0	F	543	            Enterobacteriaceae
+  0.01	1	0	G	590	              Salmonella
+  0.01	1	1	S	28901	                Salmonella enterica
+  0.01	1	0	O	1775403	          Nevskiales
+  0.01	1	0	F	568386	            Sinobacteraceae
+  0.01	1	0	G	413435	              Solimonas
+  0.01	1	1	S	2303331	                Solimonas sp. K1W22B-7
+  0.01	1	0	P	57723	      Acidobacteria
+  0.01	1	0	C	204432	        Acidobacteriia
+  0.01	1	0	O	204433	          Acidobacteriales
+  0.01	1	0	F	204434	            Acidobacteriaceae
+  0.01	1	0	G	392733	              Terriglobus
+  0.01	1	1	S	392734	                Terriglobus roseus
+  0.01	1	0	D	2157	    Archaea
+  0.01	1	0	P	28890	      Euryarchaeota
+  0.01	1	0	P1	2290931	        Stenosarchaea group
+  0.01	1	0	C	183963	          Halobacteria
+  0.01	1	0	O	1644055	            Haloferacales
+  0.01	1	0	F	1644056	              Haloferacaceae
+  0.01	1	0	G	376170	                Haloplanus
+  0.01	1	1	S	660522	                  Haloplanus aerogenes
+  0.01	1	0	D	2759	    Eukaryota
+  0.01	1	0	D1	33630	      Alveolata
+  0.01	1	0	P	5794	        Apicomplexa
+  0.01	1	0	C	1280412	          Conoidasida
+  0.01	1	0	C1	5796	            Coccidia
+  0.01	1	0	O	75739	              Eucoccidiorida
+  0.01	1	0	O1	423054	                Eimeriorina
+  0.01	1	0	F	5809	                  Sarcocystidae
+  0.01	1	0	G	5810	                    Toxoplasma
+  0.01	1	0	S	5811	                      Toxoplasma gondii
+  0.01	1	1	S1	508771	                        Toxoplasma gondii ME49
