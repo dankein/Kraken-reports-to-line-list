@@ -41,3 +41,6 @@ rsconnect/
 
 # Data directory
 /data
+
+# Output directory
+/output
