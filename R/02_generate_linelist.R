@@ -29,12 +29,37 @@ make_kraken <- function(files) {
   my_data <- as_tibble(x)
   unclassified<- my_data %>% filter(V5 == 0)
   unclassified<- unclassified[,c("V1")]
+  # This slows things down, but not all samples have unclassified in them and the script breaks, this sets a default value for unclassified if not present
+  if(nrow(unclassified) == 0){
+    V1<-c("not detected")
+    unclassified<-data.frame(V1)
+  }else{
+    unclassified<- my_data %>% filter(V5 == 0)
+    unclassified<- unclassified[,c("V1")]}
+  
+  
   bacteria<- my_data %>% filter(V5 == 2)
   bacteria<- bacteria[,c("V1")]
   mycobacterium<- my_data %>% filter(V5 == 1763)
   mycobacterium<- mycobacterium[,c("V1")]
+  # This slows things down, but not all samples have unclassified in them and the script breaks, this sets a default value for unclassified if not present
+  if(nrow(mycobacterium) == 0){
+    V1<-c("not detected")
+    mycobacterium<-data.frame(V1)
+  }else{
+    mycobacterium<- my_data %>% filter(V5 == 1763)
+    mycobacterium<- mycobacterium[,c("V1")]}
+  
   mtbc<- my_data %>% filter(V5 == 77643)
   mtbc<- mtbc[,c("V1")]
+  # This slows things down, but not all samples have Mtbc in them and the script breaks, this sets a default value for mtbc if not present
+  if(nrow(mtbc) == 0){
+    V1<-c("not detected")
+    mtbc<-data.frame(V1)
+  }else{
+    mtbc<- my_data %>% filter(V5 == 77643)
+    mtbc<- mtbc[,c("V1")]}
+  
   mtb<- my_data %>% filter(V5 == 1773)
   mtb<- mtb[,c("V1")]
   # This slows things down, but not all samples have Mtb in them and the script breaks, this sets a default value for mtb if not present
@@ -80,5 +105,3 @@ csv_data <- rbindlist(lapply(filenames,fread))
 # write the final output to .csv
 write.csv(csv_data, file="./output/kraken_linelist.csv", row.names=FALSE)
 
-#Delete the temp directory
-unlink("./output/temp", recursive = TRUE)
