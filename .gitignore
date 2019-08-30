@@ -40,7 +40,8 @@ rsconnect/
 .Rproj.user
 
 # Data in data directory
-*.tabular
+/data/*
+!/data/.gitkeep
 
 # Output
-*.csv
+/output/*.csv
