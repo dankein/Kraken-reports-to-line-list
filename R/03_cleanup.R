@@ -1,3 +1,7 @@
+# Use this  R script for resetting the data and output directories by removing all the files in them
+# Daniel Kein
+# August 2019
+
 
 #delete tabular files in the data directory
 datadir <- "./data"
